@@ -19,7 +19,7 @@ for i in range (0, n) :
     #Gaussian
     gaussian = cv2.GaussianBlur(result, (3,3), 1)
 
-    kernel = np.ones((9,9), np.uint8) 
+    kernel = np.ones((10,10), np.uint8) 
     dilate = cv2.dilate(gaussian, kernel, iterations=1)
     dilate_gray = cv2.cvtColor(dilate, cv2.COLOR_BGR2GRAY)
 
@@ -58,5 +58,4 @@ for i in range (0, n) :
     plt.title("Gray")
     plt.axis('off')
     
-    plt.tight_layout()
     plt.show()
